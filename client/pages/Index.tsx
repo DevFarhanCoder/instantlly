@@ -575,7 +575,7 @@ export default function Index() {
       </section>
 
       {/* Ready to Grow Your Brand Section */}
-      <section className="py-16 md:py-24 bg-background relative overflow-hidden">
+      <section id="contact" className="py-16 md:py-24 bg-background relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-neon-blue/10 via-transparent to-neon-orange/10" />
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-neon-blue/20 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-neon-orange/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
