@@ -301,7 +301,7 @@ export default function Index() {
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-gradient">Proven Results That Speak</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-gradient">Success Stories</h2>
             <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto px-4">
               See how we've helped brands achieve remarkable growth and exceed their marketing goals.
             </p>
