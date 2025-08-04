@@ -3,6 +3,7 @@ import { ArrowRight, Play, Star, Users, TrendingUp, Award, Zap, Target, Palette,
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import ConsultationForm from '@/components/ConsultationForm';
 
 const AnimatedSection: React.FC<{ children: React.ReactNode; className?: string; delay?: number }> = ({ 
   children, 
