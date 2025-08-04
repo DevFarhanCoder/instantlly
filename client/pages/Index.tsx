@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import ConsultationForm from '@/components/ConsultationForm';
+import HeroCarousel from '@/components/HeroCarousel';
+import SuccessStoriesCarousel from '@/components/SuccessStoriesCarousel';
 
 const AnimatedSection: React.FC<{ children: React.ReactNode; className?: string; delay?: number }> = ({ 
   children, 
@@ -472,7 +474,7 @@ export default function Index() {
                 name: 'Marcus Rodriguez',
                 role: 'CMO, Growth Dynamics',
                 content: 'The team\'s creativity and data-driven approach helped us achieve a 300% increase in qualified leads. Absolutely exceptional work.',
-                avatar: '👨🏽‍💼',
+                avatar: '👨🏽���💼',
                 rating: 5
               },
               {
