@@ -271,11 +271,11 @@ const SuccessStoriesCarousel = () => {
       {/* Progress Bar */}
       <div className="mt-4 max-w-md mx-auto">
         <div className="h-1 bg-white/20 rounded-full overflow-hidden">
-          <div 
-            className="h-full bg-gradient-to-r from-neon-blue to-neon-orange transition-all duration-5000 ease-linear"
+          <div
+            className="h-full bg-gradient-to-r from-neon-blue to-neon-orange transition-all duration-6000 ease-linear"
             style={{
               width: isTransitioning ? '100%' : '0%',
-              animation: isTransitioning ? 'none' : 'progress 5s linear infinite'
+              animation: isTransitioning ? 'none' : 'progress 6s linear infinite'
             }}
           />
         </div>
