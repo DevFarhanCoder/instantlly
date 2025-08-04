@@ -20,48 +20,51 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-background flex flex-col">
           <Navigation />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route 
-              path="/services" 
-              element={
-                <PlaceholderPage 
-                  title="Our Services" 
-                  description="Discover our comprehensive range of marketing services designed to elevate your brand and drive results." 
-                />
-              } 
-            />
-            <Route 
-              path="/case-studies" 
-              element={
-                <PlaceholderPage 
-                  title="Case Studies" 
-                  description="Explore our portfolio of successful campaigns and see how we've helped brands achieve their goals." 
-                />
-              } 
-            />
-            <Route 
-              path="/about" 
-              element={
-                <PlaceholderPage 
-                  title="About Us" 
-                  description="Meet our talented team and learn about our mission to create exceptional marketing experiences." 
-                />
-              } 
-            />
-            <Route 
-              path="/contact" 
-              element={
-                <PlaceholderPage 
-                  title="Contact Us" 
-                  description="Ready to start your next project? Get in touch with our team and let's create something amazing together." 
-                />
-              } 
-            />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <main className="flex-1">
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route
+                path="/services"
+                element={
+                  <PlaceholderPage
+                    title="Our Services"
+                    description="Discover our comprehensive range of marketing services designed to elevate your brand and drive results."
+                  />
+                }
+              />
+              <Route
+                path="/case-studies"
+                element={
+                  <PlaceholderPage
+                    title="Case Studies"
+                    description="Explore our portfolio of successful campaigns and see how we've helped brands achieve their goals."
+                  />
+                }
+              />
+              <Route
+                path="/about"
+                element={
+                  <PlaceholderPage
+                    title="About Us"
+                    description="Meet our talented team and learn about our mission to create exceptional marketing experiences."
+                  />
+                }
+              />
+              <Route
+                path="/contact"
+                element={
+                  <PlaceholderPage
+                    title="Contact Us"
+                    description="Ready to start your next project? Get in touch with our team and let's create something amazing together."
+                  />
+                }
+              />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
+          <Footer />
         </div>
       </BrowserRouter>
     </TooltipProvider>
