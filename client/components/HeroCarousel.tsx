@@ -140,7 +140,7 @@ const HeroCarousel = () => {
               </Button>
               <Button size="lg" variant="outline" className="w-full sm:w-auto border-primary/50 hover:bg-primary/10 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg group">
                 <Play className="mr-2 h-4 md:h-5 w-4 md:w-5 group-hover:scale-110 transition-transform" />
-                {currentSlide === 1 ? 'Partner With Us' : currentSlide === 2 ? 'Schedule Call' : 'Watch Our Work'}
+                {currentSlide === 1 ? 'Partner With Us' : currentSlide === 2 ? 'See Success Stories' : 'Watch Our Work'}
               </Button>
             </div>
             
