@@ -66,20 +66,32 @@ const Navigation = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={`relative text-sm font-medium transition-colors duration-200 group ${
-                  isActive(item.href)
-                    ? 'text-primary'
-                    : 'text-foreground/80 hover:text-primary'
-                }`}
-              >
-                {item.name}
-                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-neon-blue to-neon-orange transition-all duration-200 ${
-                  isActive(item.href) ? 'w-full' : 'w-0 group-hover:w-full'
-                }`} />
-              </Link>
+              item.action && location.pathname === '/' ? (
+                <button
+                  key={item.name}
+                  onClick={item.action}
+                  className="relative text-sm font-medium transition-colors duration-200 group text-foreground/80 hover:text-primary"
+                >
+                  {item.name}
+                  <span className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-neon-blue to-neon-orange transition-all duration-200 w-0 group-hover:w-full" />
+                </button>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  onClick={(e) => handleNavClick(item.href, e)}
+                  className={`relative text-sm font-medium transition-colors duration-200 group ${
+                    isActive(item.href)
+                      ? 'text-primary'
+                      : 'text-foreground/80 hover:text-primary'
+                  }`}
+                >
+                  {item.name}
+                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-neon-blue to-neon-orange transition-all duration-200 ${
+                    isActive(item.href) ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`} />
+                </Link>
+              )
             ))}
           </div>
 
