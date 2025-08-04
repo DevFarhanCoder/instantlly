@@ -117,18 +117,34 @@ const Navigation = () => {
           <div className="md:hidden mt-4 glass rounded-2xl overflow-hidden animate-fade-in">
             <div className="px-6 py-4 space-y-4">
               {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className={`block py-2 text-sm font-medium transition-colors ${
-                    isActive(item.href)
-                      ? 'text-primary'
-                      : 'text-foreground/80 hover:text-primary'
-                  }`}
-                >
-                  {item.name}
-                </Link>
+                item.action && location.pathname === '/' ? (
+                  <button
+                    key={item.name}
+                    onClick={() => {
+                      item.action!();
+                      setIsOpen(false);
+                    }}
+                    className="block py-2 text-sm font-medium transition-colors text-foreground/80 hover:text-primary w-full text-left"
+                  >
+                    {item.name}
+                  </button>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    onClick={(e) => {
+                      handleNavClick(item.href, e);
+                      setIsOpen(false);
+                    }}
+                    className={`block py-2 text-sm font-medium transition-colors ${
+                      isActive(item.href)
+                        ? 'text-primary'
+                        : 'text-foreground/80 hover:text-primary'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
               <Button className="w-full bg-gradient-to-r from-neon-blue to-neon-orange mt-4">
                 Get Started
