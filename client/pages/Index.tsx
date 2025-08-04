@@ -574,24 +574,28 @@ export default function Index() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Ready to Grow Your Brand Section */}
       <section className="py-16 md:py-24 bg-background relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-neon-blue/10 via-transparent to-neon-orange/10" />
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-neon-blue/20 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-neon-orange/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <AnimatedSection className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-gradient">Ready to Transform Your Brand?</h2>
-            <p className="text-lg md:text-xl text-foreground/80 mb-6 md:mb-8 px-4">
-              Let's create something extraordinary together. Get in touch and discover how we can accelerate your growth.
+          <AnimatedSection className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-gradient">Ready to Grow Your Brand?</h2>
+            <p className="text-lg md:text-xl text-foreground/80 mb-8 max-w-3xl mx-auto px-4">
+              Take the first step towards transforming your marketing strategy. Book a free consultation with our experts and discover how we can accelerate your growth.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
-              <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-neon-blue to-neon-orange hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 group px-6 md:px-8 py-3 md:py-4 text-base md:text-lg">
-                Get Started Today
-                <ArrowRight className="ml-2 h-4 md:h-5 w-4 md:w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto border-primary/50 hover:bg-primary/10 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg">
-                Schedule a Call
-              </Button>
-            </div>
+          </AnimatedSection>
+
+          <AnimatedSection delay={300}>
+            <ConsultationForm />
+          </AnimatedSection>
+
+          <AnimatedSection delay={500} className="text-center mt-8">
+            <p className="text-sm text-foreground/60">
+              🔒 Your information is secure and will only be used to contact you about your consultation.
+            </p>
           </AnimatedSection>
         </div>
       </section>
