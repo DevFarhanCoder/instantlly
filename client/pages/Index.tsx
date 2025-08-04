@@ -248,60 +248,10 @@ export default function Index() {
               See how we've helped brands achieve remarkable growth and exceed their marketing goals.
             </p>
           </AnimatedSection>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-            {[
-              {
-                client: 'TechFlow Solutions',
-                industry: 'SaaS',
-                challenge: 'Increase user acquisition by 300%',
-                solution: 'Comprehensive digital marketing strategy with optimized funnels',
-                results: ['400% increase in qualified leads', '250% boost in conversion rates', '180% growth in monthly revenue'],
-                logo: '🚀'
-              },
-              {
-                client: 'EcoLife Brands',
-                industry: 'E-commerce',
-                challenge: 'Launch new product line in competitive market',
-                solution: 'Brand positioning and multi-channel marketing campaign',
-                results: ['$2M in first-quarter sales', '85% brand awareness increase', '500K+ social media impressions'],
-                logo: '🌱'
-              }
-            ].map((caseStudy, index) => (
-              <AnimatedSection key={index} delay={index * 200}>
-                <Card className="glass border-white/10 p-6 md:p-8 hover:border-primary/50 transition-all duration-300 h-full">
-                  <div className="flex items-center mb-6">
-                    <div className="text-3xl md:text-4xl mr-4">{caseStudy.logo}</div>
-                    <div>
-                      <h3 className="text-xl md:text-2xl font-bold text-gradient">{caseStudy.client}</h3>
-                      <p className="text-sm md:text-base text-foreground/60">{caseStudy.industry}</p>
-                    </div>
-                  </div>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-neon-orange mb-2 text-sm md:text-base">Challenge</h4>
-                      <p className="text-foreground/80 text-sm md:text-base">{caseStudy.challenge}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-neon-blue mb-2 text-sm md:text-base">Solution</h4>
-                      <p className="text-foreground/80 text-sm md:text-base">{caseStudy.solution}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-neon-orange mb-2 text-sm md:text-base">Results</h4>
-                      <ul className="space-y-2">
-                        {caseStudy.results.map((result, i) => (
-                          <li key={i} className="flex items-center text-foreground/80 text-sm md:text-base">
-                            <TrendingUp className="h-3 w-3 md:h-4 md:w-4 text-neon-blue mr-2 flex-shrink-0" />
-                            {result}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </Card>
-              </AnimatedSection>
-            ))}
-          </div>
+
+          <AnimatedSection delay={300}>
+            <SuccessStoriesCarousel />
+          </AnimatedSection>
         </div>
       </section>
 
