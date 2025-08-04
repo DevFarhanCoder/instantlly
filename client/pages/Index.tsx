@@ -93,6 +93,72 @@ export default function Index() {
         </div>
       </section>
 
+      {/* About Instantlly Section */}
+      <section className="py-16 md:py-24 bg-muted/30">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <AnimatedSection>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gradient">About Instantlly</h2>
+              <p className="text-lg md:text-xl text-foreground/80 mb-6 leading-relaxed">
+                Founded with a vision to revolutionize digital marketing in India, Instantlly has emerged as a leading marketing agency that combines creativity with data-driven strategies.
+              </p>
+              <p className="text-base md:text-lg text-foreground/70 mb-8 leading-relaxed">
+                We specialize in creating instant impact for brands through innovative campaigns, cutting-edge technology, and deep market insights. Our team of experts works tirelessly to deliver results that exceed expectations and drive sustainable growth.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-gradient mb-2">5+</div>
+                  <div className="text-sm md:text-base text-foreground/60">Years Experience</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-gradient mb-2">500+</div>
+                  <div className="text-sm md:text-base text-foreground/60">Brands Served</div>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={300}>
+              <div className="relative">
+                <div className="glass rounded-3xl p-8 border border-white/10">
+                  <div className="grid grid-cols-2 gap-6">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-gradient-to-r from-neon-blue/20 to-neon-blue/40 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                        <Zap className="h-8 w-8 text-neon-blue" />
+                      </div>
+                      <h3 className="font-bold text-gradient mb-2">Innovation</h3>
+                      <p className="text-sm text-foreground/70">Cutting-edge solutions for modern challenges</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-gradient-to-r from-neon-orange/20 to-neon-orange/40 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                        <Target className="h-8 w-8 text-neon-orange" />
+                      </div>
+                      <h3 className="font-bold text-gradient mb-2">Precision</h3>
+                      <p className="text-sm text-foreground/70">Data-driven strategies that hit the mark</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-gradient-to-r from-neon-blue/20 to-neon-blue/40 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                        <Users className="h-8 w-8 text-neon-blue" />
+                      </div>
+                      <h3 className="font-bold text-gradient mb-2">Partnership</h3>
+                      <p className="text-sm text-foreground/70">Your success is our primary goal</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-gradient-to-r from-neon-orange/20 to-neon-orange/40 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                        <Award className="h-8 w-8 text-neon-orange" />
+                      </div>
+                      <h3 className="font-bold text-gradient mb-2">Excellence</h3>
+                      <p className="text-sm text-foreground/70">Award-winning campaigns and results</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute -top-4 -right-4 w-20 h-20 bg-neon-blue/20 rounded-full blur-2xl animate-float" />
+                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-neon-orange/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }} />
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/50">
         <div className="container mx-auto px-4 md:px-6">
@@ -247,7 +313,7 @@ export default function Index() {
                 name: 'Sarah Chen',
                 role: 'CEO, Innovation Labs',
                 content: 'Working with this agency transformed our digital presence. Their strategic approach and execution excellence delivered results beyond our expectations.',
-                avatar: '👩🏻‍���',
+                avatar: '👩🏻‍💼',
                 rating: 5
               },
               {
