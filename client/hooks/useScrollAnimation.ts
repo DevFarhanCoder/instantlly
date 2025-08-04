@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 interface UseScrollAnimationOptions {
   threshold?: number;
@@ -24,8 +24,8 @@ export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
       },
       {
         threshold,
-        rootMargin: '50px',
-      }
+        rootMargin: "50px",
+      },
     );
 
     if (elementRef.current) {
@@ -56,8 +56,8 @@ export const useParallax = (speed: number = 0.5) => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [speed]);
 
   return { elementRef, offset };

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ArrowRight } from 'lucide-react';
-import { Button } from './ui/button';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, ArrowRight } from "lucide-react";
+import { Button } from "./ui/button";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,20 +13,20 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setIsOpen(false);
     }
   };
 
   const handleNavClick = (href: string, e?: React.MouseEvent) => {
-    if (location.pathname === '/' && href.startsWith('#')) {
+    if (location.pathname === "/" && href.startsWith("#")) {
       e?.preventDefault();
       scrollToSection(href.slice(1));
     } else {
@@ -35,22 +35,48 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { name: 'Home', href: '/', action: null },
-    { name: 'About', href: location.pathname === '/' ? '#about' : '/#about', action: () => location.pathname === '/' ? scrollToSection('about') : null },
-    { name: 'Services', href: location.pathname === '/' ? '#services' : '/#services', action: () => location.pathname === '/' ? scrollToSection('services') : null },
-    { name: 'Industries', href: location.pathname === '/' ? '#industries' : '/#industries', action: () => location.pathname === '/' ? scrollToSection('industries') : null },
-    { name: 'Success Stories', href: location.pathname === '/' ? '#success-stories' : '/#success-stories', action: () => location.pathname === '/' ? scrollToSection('success-stories') : null },
-    { name: 'Contact', href: location.pathname === '/' ? '#contact' : '/#contact', action: () => location.pathname === '/' ? scrollToSection('contact') : null },
+    { name: "Home", href: "/", action: null },
+    {
+      name: "About",
+      href: location.pathname === "/" ? "#about" : "/#about",
+      action: () =>
+        location.pathname === "/" ? scrollToSection("about") : null,
+    },
+    {
+      name: "Services",
+      href: location.pathname === "/" ? "#services" : "/#services",
+      action: () =>
+        location.pathname === "/" ? scrollToSection("services") : null,
+    },
+    {
+      name: "Industries",
+      href: location.pathname === "/" ? "#industries" : "/#industries",
+      action: () =>
+        location.pathname === "/" ? scrollToSection("industries") : null,
+    },
+    {
+      name: "Success Stories",
+      href:
+        location.pathname === "/" ? "#success-stories" : "/#success-stories",
+      action: () =>
+        location.pathname === "/" ? scrollToSection("success-stories") : null,
+    },
+    {
+      name: "Contact",
+      href: location.pathname === "/" ? "#contact" : "/#contact",
+      action: () =>
+        location.pathname === "/" ? scrollToSection("contact") : null,
+    },
   ];
 
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'glass-dark shadow-2xl' 
-        : 'bg-transparent'
-    }`}>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "glass-dark shadow-2xl" : "bg-transparent"
+      }`}
+    >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -65,8 +91,10 @@ const Navigation = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              item.action && location.pathname === '/' && item.name !== 'Home' ? (
+            {navItems.map((item) =>
+              item.action &&
+              location.pathname === "/" &&
+              item.name !== "Home" ? (
                 <button
                   key={item.name}
                   onClick={item.action}
@@ -81,18 +109,24 @@ const Navigation = () => {
                   to={item.href}
                   onClick={(e) => handleNavClick(item.href, e)}
                   className={`relative text-sm font-medium transition-colors duration-200 group ${
-                    (item.name === 'Home' && location.pathname === '/') || isActive(item.href)
-                      ? 'text-primary'
-                      : 'text-foreground/80 hover:text-primary'
+                    (item.name === "Home" && location.pathname === "/") ||
+                    isActive(item.href)
+                      ? "text-primary"
+                      : "text-foreground/80 hover:text-primary"
                   }`}
                 >
                   {item.name}
-                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-neon-blue to-neon-orange transition-all duration-200 ${
-                    (item.name === 'Home' && location.pathname === '/') || isActive(item.href) ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`} />
+                  <span
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-neon-blue to-neon-orange transition-all duration-200 ${
+                      (item.name === "Home" && location.pathname === "/") ||
+                      isActive(item.href)
+                        ? "w-full"
+                        : "w-0 group-hover:w-full"
+                    }`}
+                  />
                 </Link>
-              )
-            ))}
+              ),
+            )}
           </div>
 
           {/* CTA Button */}
@@ -116,8 +150,10 @@ const Navigation = () => {
         {isOpen && (
           <div className="md:hidden mt-4 glass rounded-2xl overflow-hidden animate-fade-in">
             <div className="px-6 py-4 space-y-4">
-              {navItems.map((item) => (
-                item.action && location.pathname === '/' && item.name !== 'Home' ? (
+              {navItems.map((item) =>
+                item.action &&
+                location.pathname === "/" &&
+                item.name !== "Home" ? (
                   <button
                     key={item.name}
                     onClick={() => {
@@ -137,15 +173,16 @@ const Navigation = () => {
                       setIsOpen(false);
                     }}
                     className={`block py-2 text-sm font-medium transition-colors ${
-                      (item.name === 'Home' && location.pathname === '/') || isActive(item.href)
-                        ? 'text-primary'
-                        : 'text-foreground/80 hover:text-primary'
+                      (item.name === "Home" && location.pathname === "/") ||
+                      isActive(item.href)
+                        ? "text-primary"
+                        : "text-foreground/80 hover:text-primary"
                     }`}
                   >
                     {item.name}
                   </Link>
-                )
-              ))}
+                ),
+              )}
               <Button className="w-full bg-gradient-to-r from-neon-blue to-neon-orange mt-4">
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4" />
