@@ -36,11 +36,11 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'Home', href: '/', action: null },
-    { name: 'About', href: '#about', action: () => location.pathname === '/' ? scrollToSection('about') : null },
-    { name: 'Services', href: location.pathname === '/' ? '#services' : '/services', action: () => location.pathname === '/' ? scrollToSection('services') : null },
-    { name: 'Industries', href: '#industries', action: () => location.pathname === '/' ? scrollToSection('industries') : null },
-    { name: 'Success Stories', href: '#success-stories', action: () => location.pathname === '/' ? scrollToSection('success-stories') : null },
-    { name: 'Contact', href: '#contact', action: () => location.pathname === '/' ? scrollToSection('contact') : null },
+    { name: 'About', href: location.pathname === '/' ? '#about' : '/#about', action: () => location.pathname === '/' ? scrollToSection('about') : null },
+    { name: 'Services', href: location.pathname === '/' ? '#services' : '/#services', action: () => location.pathname === '/' ? scrollToSection('services') : null },
+    { name: 'Industries', href: location.pathname === '/' ? '#industries' : '/#industries', action: () => location.pathname === '/' ? scrollToSection('industries') : null },
+    { name: 'Success Stories', href: location.pathname === '/' ? '#success-stories' : '/#success-stories', action: () => location.pathname === '/' ? scrollToSection('success-stories') : null },
+    { name: 'Contact', href: location.pathname === '/' ? '#contact' : '/#contact', action: () => location.pathname === '/' ? scrollToSection('contact') : null },
   ];
 
   const isActive = (href: string) => location.pathname === href;
