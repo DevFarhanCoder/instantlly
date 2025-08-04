@@ -36,11 +36,13 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-r from-neon-blue to-neon-orange rounded-lg flex items-center justify-center group-hover:neon-glow transition-all duration-300">
-              <span className="text-white font-bold text-xl">A</span>
-            </div>
-            <span className="text-2xl font-bold text-gradient">AGENCY</span>
+          <Link to="/" className="flex items-center space-x-3 group">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F4fd2c3a083aa4c03aa88864cf4e2b13f%2F8982852c31494405872d79d9d2656910?format=webp&width=800"
+              alt="Instantlly Logo"
+              className="w-10 h-10 rounded-lg group-hover:scale-110 transition-transform duration-300"
+            />
+            <span className="text-2xl font-bold text-gradient">Instantlly</span>
           </Link>
 
           {/* Desktop Menu */}
