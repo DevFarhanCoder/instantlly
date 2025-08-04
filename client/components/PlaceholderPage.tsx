@@ -10,7 +10,7 @@ interface PlaceholderPageProps {
 
 const PlaceholderPage: React.FC<PlaceholderPageProps> = ({ title, description }) => {
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center px-6">
+    <div className="py-24 bg-background flex items-center justify-center px-6 min-h-[calc(100vh-140px)]">
       <div className="text-center max-w-2xl mx-auto animate-fade-in">
         <div className="glass-dark rounded-3xl p-12 border border-white/10">
           <Construction className="h-24 w-24 text-primary mx-auto mb-6 animate-float" />
