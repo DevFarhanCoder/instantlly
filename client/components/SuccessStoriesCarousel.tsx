@@ -93,7 +93,7 @@ const SuccessStoriesCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 5000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [currentSlide]);
