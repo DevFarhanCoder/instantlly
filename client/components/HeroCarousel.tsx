@@ -108,15 +108,24 @@ const HeroCarousel = () => {
             isTransitioning ? 'opacity-0 translate-y-8 scale-95' : 'opacity-100 translate-y-0 scale-100'
           }`}>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              {currentSlideData.mainText}
-              <span className="block text-gradient animate-pulse-glow">
-                {currentSlideData.highlightText}
-              </span>
-              {currentSlide === 0 && "That Convert"}
-              {currentSlide === 2 && (
-                <span className="block text-gradient">
-                  — faster than anyone else.
-                </span>
+              {currentSlide === 2 ? (
+                <>
+                  <span className="block">{currentSlideData.mainText}</span>
+                  <span className="block text-gradient animate-pulse-glow">
+                    {currentSlideData.highlightText}
+                  </span>
+                  <span className="block text-2xl md:text-4xl lg:text-5xl text-neon-orange font-medium mt-2">
+                    — Faster Than Anyone Else
+                  </span>
+                </>
+              ) : (
+                <>
+                  {currentSlideData.mainText}
+                  <span className="block text-gradient animate-pulse-glow">
+                    {currentSlideData.highlightText}
+                  </span>
+                  {currentSlide === 0 && "That Convert"}
+                </>
               )}
             </h1>
             
