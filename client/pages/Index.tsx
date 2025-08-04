@@ -229,6 +229,74 @@ export default function Index() {
         </div>
       </section>
 
+      {/* How We Work Section */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4 md:px-6">
+          <AnimatedSection className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-gradient">How We Work</h2>
+            <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto">
+              Our proven 4-step process ensures every project delivers exceptional results from strategy to execution.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                step: '01',
+                title: 'Discovery & Strategy',
+                description: 'We deep-dive into your business, market, and goals to create a comprehensive strategy.',
+                icon: Lightbulb,
+                color: 'neon-blue'
+              },
+              {
+                step: '02',
+                title: 'Creative Development',
+                description: 'Our creative team brings your brand to life with compelling visuals and messaging.',
+                icon: Palette,
+                color: 'neon-orange'
+              },
+              {
+                step: '03',
+                title: 'Campaign Execution',
+                description: 'We launch multi-channel campaigns with precision timing and flawless execution.',
+                icon: Rocket,
+                color: 'neon-blue'
+              },
+              {
+                step: '04',
+                title: 'Optimize & Scale',
+                description: 'Continuous monitoring and optimization to maximize performance and ROI.',
+                icon: TrendingUp,
+                color: 'neon-orange'
+              }
+            ].map((process, index) => (
+              <AnimatedSection key={index} delay={index * 150}>
+                <div className="relative text-center">
+                  <div className="glass border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all duration-300 group">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <div className={`w-8 h-8 rounded-full bg-gradient-to-r ${
+                        process.color === 'neon-blue' ? 'from-neon-blue to-neon-blue' : 'from-neon-orange to-neon-orange'
+                      } flex items-center justify-center text-background font-bold text-sm`}>
+                        {process.step}
+                      </div>
+                    </div>
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${
+                      process.color === 'neon-blue' ? 'from-neon-blue/20 to-neon-blue/40' : 'from-neon-orange/20 to-neon-orange/40'
+                    } flex items-center justify-center mb-6 mx-auto mt-4 group-hover:scale-110 transition-transform duration-300`}>
+                      <process.icon className={`h-8 w-8 ${
+                        process.color === 'neon-blue' ? 'text-neon-blue' : 'text-neon-orange'
+                      }`} />
+                    </div>
+                    <h3 className="text-lg md:text-xl font-bold mb-4 group-hover:text-gradient transition-all duration-300">{process.title}</h3>
+                    <p className="text-sm md:text-base text-foreground/70 leading-relaxed">{process.description}</p>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Proven Results Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6">
