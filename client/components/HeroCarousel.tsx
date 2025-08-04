@@ -135,7 +135,7 @@ const HeroCarousel = () => {
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 px-4">
               <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-neon-blue to-neon-orange hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 group px-6 md:px-8 py-3 md:py-4 text-base md:text-lg">
-                {currentSlide === 1 ? 'Get Free Consultation' : currentSlide === 2 ? 'Start Your Journey' : 'Start Your Project'}
+                {currentSlide === 1 ? 'Get Free Consultation' : currentSlide === 2 ? 'Transform My Brand' : 'Start Your Project'}
                 <ArrowRight className="ml-2 h-4 md:h-5 w-4 md:w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button size="lg" variant="outline" className="w-full sm:w-auto border-primary/50 hover:bg-primary/10 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg group">
