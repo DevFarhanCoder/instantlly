@@ -56,7 +56,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F4fd2c3a083aa4c03aa88864cf4e2b13f%2F8982852c31494405872d79d9d2656910?format=webp&width=800"
+              src="https://cdn.builder.io/api/v1/image/assets%2F4fd2c3a083aa4c03aa88864cf4e2b13f%2Fed7e862f71ad4ca2b2f5beac2ae5fb37?format=webp&width=800"
               alt="Instantlly Logo"
               className="w-10 h-10 rounded-lg group-hover:scale-110 transition-transform duration-300"
             />
