@@ -117,7 +117,7 @@ const Navigation = () => {
           <div className="md:hidden mt-4 glass rounded-2xl overflow-hidden animate-fade-in">
             <div className="px-6 py-4 space-y-4">
               {navItems.map((item) => (
-                item.action && location.pathname === '/' ? (
+                item.action && location.pathname === '/' && item.name !== 'Home' ? (
                   <button
                     key={item.name}
                     onClick={() => {
@@ -137,7 +137,7 @@ const Navigation = () => {
                       setIsOpen(false);
                     }}
                     className={`block py-2 text-sm font-medium transition-colors ${
-                      isActive(item.href)
+                      (item.name === 'Home' && location.pathname === '/') || isActive(item.href)
                         ? 'text-primary'
                         : 'text-foreground/80 hover:text-primary'
                     }`}
