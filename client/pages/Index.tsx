@@ -30,71 +30,10 @@ const AnimatedSection: React.FC<{ children: React.ReactNode; className?: string;
 };
 
 export default function Index() {
-  const heroRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (heroRef.current) {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.3;
-        heroRef.current.style.transform = `translateY(${rate}px)`;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <div className="bg-background overflow-hidden">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/50" />
-        <div className="absolute top-1/4 left-1/4 w-32 md:w-64 h-32 md:h-64 bg-neon-blue/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 right-1/4 w-40 md:w-80 h-40 md:h-80 bg-neon-orange/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-        
-        <div ref={heroRef} className="relative z-10 container mx-auto px-4 md:px-6 text-center">
-          <div className="max-w-4xl mx-auto animate-fade-in">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              We Create
-              <span className="block text-gradient animate-pulse-glow">
-                Digital Experiences
-              </span>
-              That Convert
-            </h1>
-            <p className="text-lg md:text-xl lg:text-2xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed px-4">
-              Transform your brand with cutting-edge marketing strategies that drive real results. 
-              We're not just an agency—we're your growth partners.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 px-4">
-              <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-neon-blue to-neon-orange hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 group px-6 md:px-8 py-3 md:py-4 text-base md:text-lg">
-                Start Your Project
-                <ArrowRight className="ml-2 h-4 md:h-5 w-4 md:w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto border-primary/50 hover:bg-primary/10 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg group">
-                <Play className="mr-2 h-4 md:h-5 w-4 md:w-5 group-hover:scale-110 transition-transform" />
-                Watch Our Work
-              </Button>
-            </div>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-3xl mx-auto px-4">
-              {[
-                { number: '250+', label: 'Projects Delivered' },
-                { number: '98%', label: 'Client Satisfaction' },
-                { number: '150%', label: 'Average ROI Increase' },
-                { number: '24/7', label: 'Support Available' },
-              ].map((stat, index) => (
-                <div key={index} className="text-center animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-gradient mb-1">{stat.number}</div>
-                  <div className="text-xs md:text-sm text-foreground/60">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Carousel Section */}
+      <HeroCarousel />
 
       {/* About Instantlly Section */}
       <section id="about" className="py-16 md:py-24 bg-muted/30">
@@ -474,7 +413,7 @@ export default function Index() {
                 name: 'Marcus Rodriguez',
                 role: 'CMO, Growth Dynamics',
                 content: 'The team\'s creativity and data-driven approach helped us achieve a 300% increase in qualified leads. Absolutely exceptional work.',
-                avatar: '👨🏽���💼',
+                avatar: '👨🏽‍💼',
                 rating: 5
               },
               {
