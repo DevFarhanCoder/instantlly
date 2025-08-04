@@ -149,24 +149,30 @@ const SuccessStoriesCarousel = () => {
             return (
               <div
                 key={`${study.id}-${currentSlide}`}
-                className={`absolute transition-all duration-700 ease-out transform-gpu ${
-                  isTransitioning ? 'opacity-0 scale-90' : 'opacity-100'
+                className={`absolute transition-all duration-1000 ease-in-out transform-gpu ${
+                  isTransitioning ? 'opacity-0 scale-90 blur-sm' : 'opacity-100'
                 } ${
-                  isCenter 
-                    ? 'z-30 scale-110 translate-x-0 rotate-0' 
-                    : isLeft 
-                    ? 'z-20 scale-90 -translate-x-48 lg:-translate-x-64 rotate-y-12 opacity-70' 
-                    : 'z-20 scale-90 translate-x-48 lg:translate-x-64 -rotate-y-12 opacity-70'
+                  isCenter
+                    ? 'z-30 scale-110 translate-x-0 rotate-0 blur-0'
+                    : isLeft
+                    ? 'z-20 scale-90 -translate-x-48 lg:-translate-x-64 rotate-y-12 opacity-60 blur-sm'
+                    : 'z-20 scale-90 translate-x-48 lg:translate-x-64 -rotate-y-12 opacity-60 blur-sm'
                 }`}
                 style={{
                   transform: `
-                    translateX(${isCenter ? '0' : isLeft ? '-16rem' : '16rem'}) 
-                    scale(${isCenter ? '1.1' : '0.9'}) 
+                    translateX(${isCenter ? '0' : isLeft ? '-16rem' : '16rem'})
+                    scale(${isCenter ? '1.1' : '0.9'})
                     rotateY(${isCenter ? '0' : isLeft ? '15deg' : '-15deg'})
-                  `
+                  `,
+                  filter: isCenter ? 'blur(0px)' : 'blur(2px)',
+                  transition: 'all 1000ms cubic-bezier(0.4, 0, 0.2, 1), filter 800ms ease-in-out'
                 }}
               >
-                <Card className="w-80 lg:w-96 h-80 lg:h-96 glass border-white/10 hover:border-primary/50 transition-all duration-500 cursor-pointer group"
+                <Card className={`w-80 lg:w-96 h-80 lg:h-96 glass border-white/10 transition-all duration-800 cursor-pointer group ${
+                  isCenter
+                    ? 'hover:border-primary/50 shadow-2xl shadow-primary/20'
+                    : 'hover:border-primary/30 border-white/5'
+                }`}
                       onClick={() => !isCenter && goToSlide(isLeft ? (currentSlide - 1 + caseStudies.length) % caseStudies.length : (currentSlide + 1) % caseStudies.length)}>
                   <CardContent className="p-8 h-full flex flex-col justify-between">
                     <div>
