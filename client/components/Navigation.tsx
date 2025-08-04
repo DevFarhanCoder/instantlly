@@ -17,12 +17,30 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false);
+    }
+  };
+
+  const handleNavClick = (href: string, e?: React.MouseEvent) => {
+    if (location.pathname === '/' && href.startsWith('#')) {
+      e?.preventDefault();
+      scrollToSection(href.slice(1));
+    } else {
+      setIsOpen(false);
+    }
+  };
+
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Home', href: '/', action: null },
+    { name: 'About', href: '#about', action: () => location.pathname === '/' ? scrollToSection('about') : null },
+    { name: 'Services', href: location.pathname === '/' ? '#services' : '/services', action: () => location.pathname === '/' ? scrollToSection('services') : null },
+    { name: 'Industries', href: '#industries', action: () => location.pathname === '/' ? scrollToSection('industries') : null },
+    { name: 'Success Stories', href: '#success-stories', action: () => location.pathname === '/' ? scrollToSection('success-stories') : null },
+    { name: 'Contact', href: '#contact', action: () => location.pathname === '/' ? scrollToSection('contact') : null },
   ];
 
   const isActive = (href: string) => location.pathname === href;
