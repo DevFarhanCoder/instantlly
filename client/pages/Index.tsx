@@ -49,7 +49,7 @@ export default function Index() {
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-gradient mb-2">5+</div>
+                  <div className="text-2xl md:text-3xl font-bold text-gradient mb-2">10+</div>
                   <div className="text-sm md:text-base text-foreground/60">Years Experience</div>
                 </div>
                 <div className="text-center">
