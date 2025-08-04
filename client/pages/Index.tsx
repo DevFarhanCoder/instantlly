@@ -396,6 +396,58 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Industries We Serve Section */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4 md:px-6">
+          <AnimatedSection className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-gradient">Industries We Serve</h2>
+            <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto">
+              From startups to enterprises, we've helped businesses across diverse industries achieve their marketing goals with tailored strategies.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 mb-12">
+            {[
+              { name: 'Technology', icon: Code, description: 'SaaS, Apps, Software' },
+              { name: 'E-commerce', icon: ShoppingBag, description: 'Online Retail, Marketplaces' },
+              { name: 'Healthcare', icon: Heart, description: 'Medical, Wellness, Pharma' },
+              { name: 'Education', icon: GraduationCap, description: 'EdTech, Training, Courses' },
+              { name: 'Finance', icon: Briefcase, description: 'FinTech, Banking, Insurance' },
+              { name: 'Real Estate', icon: Home, description: 'Property, Construction' },
+              { name: 'Automotive', icon: Car, description: 'Cars, Motors, Parts' },
+              { name: 'Manufacturing', icon: Building, description: 'Industrial, B2B, Supply' },
+            ].map((industry, index) => (
+              <AnimatedSection key={index} delay={index * 100}>
+                <Card className="glass border-white/10 hover:border-primary/50 transition-all duration-300 group cursor-pointer h-full">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-neon-blue/20 to-neon-orange/40 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                      <industry.icon className="h-8 w-8 text-neon-blue" />
+                    </div>
+                    <h3 className="text-lg font-bold mb-2 group-hover:text-gradient transition-all duration-300">{industry.name}</h3>
+                    <p className="text-sm text-foreground/70">{industry.description}</p>
+                  </CardContent>
+                </Card>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          {/* Don't see your industry CTA */}
+          <AnimatedSection className="text-center">
+            <div className="glass border-white/10 rounded-3xl p-8 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-gradient mb-4">Don't see your industry?</h3>
+              <p className="text-foreground/80 mb-6 leading-relaxed">
+                We work with businesses across all sectors. Let's discuss how we can help your specific industry.
+              </p>
+              <Button className="bg-gradient-to-r from-neon-blue to-neon-orange hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 group">
+                <Calendar className="mr-2 h-4 w-4" />
+                Schedule a Consultation
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/50">
         <div className="container mx-auto px-4 md:px-6">
