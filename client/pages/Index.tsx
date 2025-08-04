@@ -159,6 +159,37 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Trusted by 500+ Brands Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-r from-neon-blue/5 via-background to-neon-orange/5">
+        <div className="container mx-auto px-4 md:px-6">
+          <AnimatedSection className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gradient">Trusted by 500+ Brands Across India</h2>
+            <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto">
+              Our track record speaks for itself. Here's why brands choose us again and again.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            {[
+              { metric: '98%', label: 'Client Satisfaction', icon: Star },
+              { metric: '4.9/5', label: 'Average Rating', icon: Award },
+              { metric: '95%', label: 'Client Retention', icon: Shield },
+              { metric: '2 Hours', label: 'Response Time', icon: Clock },
+            ].map((stat, index) => (
+              <AnimatedSection key={index} delay={index * 100}>
+                <div className="text-center glass border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-neon-blue/20 to-neon-orange/40 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                    <stat.icon className="h-8 w-8 text-neon-blue" />
+                  </div>
+                  <div className="text-2xl md:text-3xl font-bold text-gradient mb-2">{stat.metric}</div>
+                  <div className="text-sm md:text-base text-foreground/70">{stat.label}</div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/50">
         <div className="container mx-auto px-4 md:px-6">
