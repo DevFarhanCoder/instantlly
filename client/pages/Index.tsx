@@ -198,6 +198,39 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Our Pan-India Presence Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/50">
+        <div className="container mx-auto px-4 md:px-6">
+          <AnimatedSection className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-gradient">Our Pan-India Presence</h2>
+            <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto px-4">
+              From Mumbai to Delhi, Bangalore to Kolkata, we've established a strong footprint across India, serving clients nationwide with localized expertise and global standards.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            {[
+              { city: 'Mumbai', clients: '150+', icon: '🏙️' },
+              { city: 'Delhi NCR', clients: '120+', icon: '🏛️' },
+              { city: 'Bangalore', clients: '180+', icon: '🌆' },
+              { city: 'Chennai', clients: '90+', icon: '🏢' },
+              { city: 'Hyderabad', clients: '110+', icon: '🌃' },
+              { city: 'Pune', clients: '85+', icon: '🏘️' },
+              { city: 'Kolkata', clients: '75+', icon: '🌉' },
+              { city: 'Ahmedabad', clients: '65+', icon: '🏗️' },
+            ].map((location, index) => (
+              <AnimatedSection key={index} delay={index * 100}>
+                <div className="text-center glass border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all duration-300">
+                  <div className="text-3xl md:text-4xl mb-3">{location.icon}</div>
+                  <h3 className="text-lg md:text-xl font-bold text-gradient mb-2">{location.city}</h3>
+                  <p className="text-sm md:text-base text-foreground/70">{location.clients} Clients</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/50">
         <div className="container mx-auto px-4 md:px-6">
@@ -214,7 +247,7 @@ export default function Index() {
                 name: 'Sarah Chen',
                 role: 'CEO, Innovation Labs',
                 content: 'Working with this agency transformed our digital presence. Their strategic approach and execution excellence delivered results beyond our expectations.',
-                avatar: '👩🏻‍💼',
+                avatar: '👩🏻‍���',
                 rating: 5
               },
               {
