@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowRight, Play, Star, Users, TrendingUp, Award, Zap, Target, Palette, Code, BarChart, Globe } from 'lucide-react';
+import { ArrowRight, Play, Star, Users, TrendingUp, Award, Zap, Target, Palette, Code, BarChart, Globe, CheckCircle, Clock, Shield, Lightbulb, Headphones, Rocket, Calendar, Building, Car, Heart, GraduationCap, ShoppingBag, Home, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
