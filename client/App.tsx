@@ -6,6 +6,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navigation from "./components/Navigation";
+import PlaceholderPage from "./components/PlaceholderPage";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -17,11 +19,49 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <div className="min-h-screen bg-background">
+          <Navigation />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route 
+              path="/services" 
+              element={
+                <PlaceholderPage 
+                  title="Our Services" 
+                  description="Discover our comprehensive range of marketing services designed to elevate your brand and drive results." 
+                />
+              } 
+            />
+            <Route 
+              path="/case-studies" 
+              element={
+                <PlaceholderPage 
+                  title="Case Studies" 
+                  description="Explore our portfolio of successful campaigns and see how we've helped brands achieve their goals." 
+                />
+              } 
+            />
+            <Route 
+              path="/about" 
+              element={
+                <PlaceholderPage 
+                  title="About Us" 
+                  description="Meet our talented team and learn about our mission to create exceptional marketing experiences." 
+                />
+              } 
+            />
+            <Route 
+              path="/contact" 
+              element={
+                <PlaceholderPage 
+                  title="Contact Us" 
+                  description="Ready to start your next project? Get in touch with our team and let's create something amazing together." 
+                />
+              } 
+            />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
