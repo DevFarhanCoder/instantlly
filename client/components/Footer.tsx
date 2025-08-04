@@ -10,11 +10,11 @@ const Footer = () => {
           {/* Company Logo and Description */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <img 
-                src="https://cdn.builder.io/api/v1/image/assets%2F4fd2c3a083aa4c03aa88864cf4e2b13f%2F8982852c31494405872d79d9d2656910?format=webp&width=800" 
-                alt="Instantlly Logo" 
-                className="w-12 h-12 rounded-lg"
-              />
+              <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F4fd2c3a083aa4c03aa88864cf4e2b13f%2Fed7e862f71ad4ca2b2f5beac2ae5fb37?format=webp&width=800"
+              alt="Instantlly Logo"
+              className="w-12 h-12 rounded-lg"
+            />
               <span className="text-2xl font-bold text-gradient">Instantlly</span>
             </div>
             <p className="text-foreground/80 mb-6 leading-relaxed">
