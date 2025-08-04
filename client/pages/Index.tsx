@@ -504,6 +504,75 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Why Choose Instantlly Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/50">
+        <div className="container mx-auto px-4 md:px-6">
+          <AnimatedSection className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-gradient">Why Choose Instantlly?</h2>
+            <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto">
+              We don't just create campaigns—we build partnerships that drive sustainable growth for your business.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Data-Driven Approach',
+                description: 'Every decision backed by comprehensive analytics and market research for maximum impact.',
+                icon: BarChart,
+                color: 'neon-blue'
+              },
+              {
+                title: 'Creative Excellence',
+                description: 'Award-winning creative team that brings fresh perspectives to every campaign.',
+                icon: Award,
+                color: 'neon-orange'
+              },
+              {
+                title: 'Instant Response',
+                description: 'Quick turnaround times and 24/7 support to keep your campaigns running smoothly.',
+                icon: Zap,
+                color: 'neon-blue'
+              },
+              {
+                title: 'Proven Track Record',
+                description: '500+ successful campaigns with measurable results across diverse industries.',
+                icon: TrendingUp,
+                color: 'neon-orange'
+              },
+              {
+                title: 'Personal Attention',
+                description: 'Dedicated account managers who understand your business inside and out.',
+                icon: Users,
+                color: 'neon-blue'
+              },
+              {
+                title: '24/7 Support',
+                description: 'Round-the-clock assistance to ensure your marketing never sleeps.',
+                icon: Headphones,
+                color: 'neon-orange'
+              }
+            ].map((reason, index) => (
+              <AnimatedSection key={index} delay={index * 100}>
+                <Card className="glass border-white/10 hover:border-primary/50 transition-all duration-300 group h-full">
+                  <CardContent className="p-6">
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${
+                      reason.color === 'neon-blue' ? 'from-neon-blue/20 to-neon-blue/40' : 'from-neon-orange/20 to-neon-orange/40'
+                    } flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                      <reason.icon className={`h-8 w-8 ${
+                        reason.color === 'neon-blue' ? 'text-neon-blue' : 'text-neon-orange'
+                      }`} />
+                    </div>
+                    <h3 className="text-xl font-bold mb-4 group-hover:text-gradient transition-all duration-300">{reason.title}</h3>
+                    <p className="text-foreground/70 leading-relaxed">{reason.description}</p>
+                  </CardContent>
+                </Card>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-background relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-neon-blue/10 via-transparent to-neon-orange/10" />
