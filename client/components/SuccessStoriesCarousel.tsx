@@ -103,7 +103,7 @@ const SuccessStoriesCarousel = () => {
     setTimeout(() => {
       setCurrentSlide((prev) => (prev + 1) % caseStudies.length);
       setIsTransitioning(false);
-    }, 300);
+    }, 600);
   };
 
   const handlePrev = () => {
@@ -111,7 +111,7 @@ const SuccessStoriesCarousel = () => {
     setTimeout(() => {
       setCurrentSlide((prev) => (prev - 1 + caseStudies.length) % caseStudies.length);
       setIsTransitioning(false);
-    }, 300);
+    }, 600);
   };
 
   const goToSlide = (index: number) => {
@@ -120,7 +120,7 @@ const SuccessStoriesCarousel = () => {
       setTimeout(() => {
         setCurrentSlide(index);
         setIsTransitioning(false);
-      }, 300);
+      }, 600);
     }
   };
 
