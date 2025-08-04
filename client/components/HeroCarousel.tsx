@@ -23,15 +23,15 @@ const HeroCarousel = () => {
     {
       id: 1,
       mainText: "We Create",
-      highlightText: "Digital Experiences",
-      description: "Transform your brand with cutting-edge marketing strategies that drive real results. We're not just an agency—we're your growth partners.",
+      highlightText: "Powerful Experiences",
+      description: "Transform your brand with cutting-edge marketing strategies that drive real results. Online and offline solutions that convert everywhere.",
       stats: [
         { number: '250+', label: 'Projects Delivered' },
         { number: '98%', label: 'Client Satisfaction' },
         { number: '150%', label: 'Average ROI Increase' },
         { number: '24/7', label: 'Support Available' },
       ],
-      features: ['2-Hour Response Time', 'End-to-End Solutions', 'Data-Driven Results']
+      features: ['Online + Offline Marketing', 'End-to-End Solutions', 'Data-Driven Results']
     },
     {
       id: 2,
@@ -44,20 +44,20 @@ const HeroCarousel = () => {
         { number: '28', label: 'States Covered' },
         { number: '300%', label: 'Avg ROI Boost' },
       ],
-      features: ['2-Hour Response Time', 'End-to-End Solutions', 'Data-Driven Results']
+      features: ['2-Hour Response Time', 'Pan-India Network', 'Instant Distribution']
     },
     {
       id: 3,
-      mainText: "We don't just market your brand.",
-      highlightText: "We build it, distribute it, and sell it",
-      description: "End-to-end solutions from brand creation to nationwide sales. Faster market entry than anyone else in the industry.",
+      mainText: "Beyond Marketing.",
+      highlightText: "We Build, Distribute & Sell",
+      description: "Complete brand transformation from concept to market leadership. We don't just promote your brand—we architect its entire journey to success.",
       stats: [
-        { number: '2 Hours', label: 'Response Time' },
-        { number: '98%', label: 'Client Satisfaction' },
-        { number: '25K+', label: 'Monthly Leads' },
-        { number: '15 Days', label: 'Go-to-Market' },
+        { number: '360°', label: 'Brand Solutions' },
+        { number: '15 Days', label: 'Market Launch' },
+        { number: '5X', label: 'Faster Growth' },
+        { number: '100%', label: 'Success Rate' },
       ],
-      features: ['2-Hour Response Time', 'End-to-End Solutions', 'Data-Driven Results']
+      features: ['Complete Brand Ecosystem', 'Market Leadership Focus', 'Lightning-Fast Results']
     }
   ];
 
