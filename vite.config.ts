@@ -1,18 +1,14 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
-import path from "path";
-
 export default defineConfig({
-  root: "client", // 👈 Your actual app lives in ./client
+  root: "pages", // <-- corrected from "client"
   plugins: [react()],
   build: {
-    outDir: "../dist/client", // 👈 Output path relative to root
+    outDir: "../dist/client", // or "../dist" as you prefer
     emptyOutDir: true
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "client")
+      "@": path.resolve(__dirname, "client") // keep if you're importing from client/
     }
   },
-  publicDir: "../public" // 👈 Optional, only if you're using /public
+  publicDir: "../public"
 });
