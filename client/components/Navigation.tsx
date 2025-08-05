@@ -34,6 +34,9 @@ const Navigation = () => {
     if (location.pathname === "/" && href.startsWith("#")) {
       e?.preventDefault();
       scrollToSection(href.slice(1));
+    } else if (href === "/" && location.pathname === "/") {
+      e?.preventDefault();
+      scrollToTop();
     } else {
       setIsOpen(false);
     }
