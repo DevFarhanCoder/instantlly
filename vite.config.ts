@@ -1,19 +1,11 @@
-// vite.config.ts
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
-import path from 'path';
 
 export default defineConfig({
-  root: 'client', // 👈 important!
-  build: {
-    outDir: '../dist', // outputs to /dist in root
-    emptyOutDir: true
-  },
+  root: 'client', // 👈 this tells Vite where your index.html, main.tsx, and global.css live
   plugins: [react()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './client'),
-      '@shared': path.resolve(__dirname, './shared')
-    }
+  build: {
+    outDir: '../dist', // 👈 output will be at root-level /dist, not inside /client
+    emptyOutDir: true,
   }
 });
