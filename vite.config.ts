@@ -3,15 +3,15 @@ import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 
 export default defineConfig({
-  root: 'client',
+  root: path.resolve(__dirname, 'client'), // 👈 THIS IS CRUCIAL
   plugins: [react()],
+  build: {
+    outDir: path.resolve(__dirname, 'dist/spa'),
+    emptyOutDir: true,
+  },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './client'),
+      '@': path.resolve(__dirname, 'client'),
     },
   },
-  build: {
-    outDir: '../dist',
-    emptyOutDir: true,
-  }
 });
