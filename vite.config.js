@@ -3,16 +3,16 @@ const react = require("@vitejs/plugin-react-swc");
 const path = require("path");
 
 module.exports = defineConfig({
-  root: "pages",
+  root: "client",
   plugins: [react()],
   build: {
     outDir: "../dist/client",
-    emptyOutDir: true
+    emptyOutDir: true,
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "client")
-    }
+      "@": path.resolve(__dirname, "client"),
+    },
   },
-  publicDir: "../public"
+  publicDir: "../public",
 });
