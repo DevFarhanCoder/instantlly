@@ -1,17 +1,19 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react-swc';
-import path from 'path';
+import { defineConfig, Plugin } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
 
+// ✅ Fix: Point Vite to the client folder
 export default defineConfig({
-  root: path.resolve(__dirname, 'client'), // 👈 THIS IS CRUCIAL
+  root: path.resolve(__dirname, "client"),
   plugins: [react()],
-  build: {
-    outDir: path.resolve(__dirname, 'dist/spa'),
-    emptyOutDir: true,
-  },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'client'),
+      "@": path.resolve(__dirname, "client"),
+      "@shared": path.resolve(__dirname, "shared"), // if shared exists
     },
+  },
+  build: {
+    outDir: path.resolve(__dirname, "dist/spa"),
+    emptyOutDir: true,
   },
 });
