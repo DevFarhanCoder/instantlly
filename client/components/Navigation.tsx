@@ -25,6 +25,11 @@ const Navigation = () => {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setIsOpen(false);
+  };
+
   const handleNavClick = (href: string, e?: React.MouseEvent) => {
     if (location.pathname === "/" && href.startsWith("#")) {
       e?.preventDefault();
