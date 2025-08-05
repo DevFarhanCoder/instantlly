@@ -43,7 +43,11 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { name: "Home", href: "/", action: () => location.pathname === "/" ? scrollToTop() : null },
+    {
+      name: "Home",
+      href: "/",
+      action: () => (location.pathname === "/" ? scrollToTop() : null),
+    },
     {
       name: "About",
       href: location.pathname === "/" ? "#about" : "/#about",
