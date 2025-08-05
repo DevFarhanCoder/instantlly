@@ -1,33 +1,7 @@
 {
-<<<<<<< HEAD
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": ["dist/**"]
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/dist/server/node-build.mjs"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/dist/spa/$1"
-    }
-  ],
-  "installCommand": "npm install",
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/spa"
-=======
   "buildCommand": "npm run build:client",
-  "outputDirectory": "client/dist",
+  "outputDirectory": "dist/client",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
->>>>>>> d17bfcd528fd6585284370c284b12c4a6470e487
 }
