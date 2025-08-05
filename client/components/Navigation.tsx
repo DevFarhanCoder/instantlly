@@ -88,7 +88,16 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
+          <Link
+            to="/"
+            onClick={(e) => {
+              if (location.pathname === "/") {
+                e.preventDefault();
+                scrollToTop();
+              }
+            }}
+            className="flex items-center space-x-3 group"
+          >
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F4fd2c3a083aa4c03aa88864cf4e2b13f%2Fed7e862f71ad4ca2b2f5beac2ae5fb37?format=webp&width=800"
               alt="Instantlly Logo"
