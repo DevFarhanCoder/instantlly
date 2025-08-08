@@ -105,7 +105,7 @@ const Navigation = () => {
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F4fd2c3a083aa4c03aa88864cf4e2b13f%2Fed7e862f71ad4ca2b2f5beac2ae5fb37?format=webp&width=800"
               alt="Instantlly Logo"
-              className="w-14 h-14 rounded-lg group-hover:scale-110 transition-transform duration-300"
+              className="w-15 h-14 rounded-lg group-hover:scale-110 transition-transform duration-300"
             />
           </Link>
 
