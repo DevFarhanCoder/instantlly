@@ -118,9 +118,20 @@ const Navigation = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) =>
-              item.action &&
-              location.pathname === "/" &&
-              item.name !== "Home" ? (
+              item.external ? (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative text-sm font-medium transition-colors duration-200 group text-foreground/80 hover:text-primary"
+                >
+                  {item.name}
+                  <span className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-neon-blue to-neon-orange transition-all duration-200 w-0 group-hover:w-full" />
+                </a>
+              ) : item.action &&
+                location.pathname === "/" &&
+                item.name !== "Home" ? (
                 <button
                   key={item.name}
                   onClick={item.action}
