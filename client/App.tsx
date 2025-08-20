@@ -60,6 +60,7 @@ const App = () => (
                     description="Ready to start your next project? Get in touch with our team and let's create something amazing together."
                   />
                 }
+              />
               <Route
                 path="/channelpartners"
                 element={
