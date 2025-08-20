@@ -60,6 +60,14 @@ const App = () => (
                     description="Ready to start your next project? Get in touch with our team and let's create something amazing together."
                   />
                 }
+              <Route
+                path="/channelpartners"
+                element={
+                  <PlaceholderPage
+                    title="Channel Partners"
+                    description="Meet our taWe work closely with our channel partners to build strong, mutually beneficial relationships that drive growth, innovation, and value for clients worldwide."
+                  />
+                }
               />
               <Route path="*" element={<NotFound />} />
             </Routes>
