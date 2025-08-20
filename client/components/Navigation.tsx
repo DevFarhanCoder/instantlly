@@ -81,8 +81,9 @@ const Navigation = () => {
     },
     {
       name: "Channel Partners",
-      href: "/channelpartners",
+      href: "https://modimarts.com/",
       action: null,
+      external: true,
     },
   ];
 
