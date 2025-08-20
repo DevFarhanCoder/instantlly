@@ -79,6 +79,11 @@ const Navigation = () => {
       action: () =>
         location.pathname === "/" ? scrollToSection("contact") : null,
     },
+    {
+      name: "Channel Partners",
+      href: "/channelpartners",
+      action: null,
+    },
   ];
 
   const isActive = (href: string) => location.pathname === href;
